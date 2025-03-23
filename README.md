@@ -1,74 +1,78 @@
 # NGLx CLI
+![Preview Image](https://i.ibb.co.com/PGVQKJMD/Screenshot-2025-03-24-00-58-57-420-com-termux-edit.jpg)
+## Prerequisites
 
-## Requirements
+- **Python 3.x** installed on your system.
+- Required Python packages: `httpx`, `colorama`.
 
-- Python 3.x
-- Required packages: `httpx`, `colorama`
-
-## Installation
+## Installation Guide
 
 1. **Clone the Repository:**
+
+   Begin by cloning the repository to your local machine:
 
    ```bash
    git clone https://github.com/BrainlessDip/NGLx-CLI.git
    cd NGLx-CLI
    ```
 
-2. **Install Dependencies:**
+2. **Install Required Dependencies:**
 
-   Use pip to install the required packages:
+   Install the necessary Python packages using pip:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Configure Delay:**
+3. **Configure the Delay:**
 
-   Edit the `config.json` file to set your desired delay between message submissions:
+   Modify the `config.json` file to set your preferred delay (in seconds) between message submissions:
 
    ```json
    {
-       "delay": 1.0  // Set the delay in seconds
+       "delay": 0.5, // Delay in seconds
+       "lastUsername": "dip",
+       "lastCount": 18
    }
    ```
 
-## Usage
+## Usage Instructions
 
-1. **Run the Script:**
+1. **Launch the Script:**
 
-   Start the program by running:
+   Execute the script by running the following command in your terminal:
 
    ```bash
-   python nglx.py
+   python main.py
    ```
 
-2. **Follow the Prompts:**
+2. **Follow the On-Screen Prompts:**
 
-   - Enter the target NGL username.
-   - Specify the number of messages you want to send.
-   - Enter the message content.
+   - **Username:** Enter the target NGL username. If you press Enter without typing, the script will use the last saved username.
+   - **Message Count:** Specify the number of messages you wish to send. Press Enter to use the last saved count.
+   - **Message Content:** Enter the message you want to send. If you press Enter without typing, the script will randomly select a question from `questions.txt`
 
-   The script will begin sending messages based on your inputs and display the progress in the console.
+   The script will automatically save your last-used username and message count for future sessions
 
-## Example
+3. **Random Questions:**
+
+   To send random questions, ensure your questions are listed in the `questions.txt` file, with each question on a new line. When prompted for the message, simply press Enter, and the script will randomly select a question from the file
+
+## Example Workflow
 
 ```bash
-[~] Enter username: exampleuser
-[~] Enter message count: 10
-[~] Enter message: Hello from NGL Spammer!
+[~] Enter username (username): dip
+[~] Enter message count (27): 37
+[!] Press Enter for random questions
+[~] Enter message:
 ```
 
 ## Web Version
 
-For a more user-friendly experience, you can use the web version of this tool available at:
+For a more intuitive and user-friendly experience, you can use the web version of this tool, available at:
 
 [NGLx Web Version](https://github.com/BrainlessDip/NGLx)
 
-## Notes
-
-- The script logs the status of each message sent, including successes, errors, and rate limits.
-- Ensure you use this tool responsibly and within the terms of service of NGL.link.
-
 ## Disclaimer
 
-This tool is for educational and testing purposes only. Misuse of this script to spam or harass is prohibited and may lead to legal consequences. Use responsibly.
+This tool is designed strictly for educational and testing purposes. Use it responsibly and ensure you have permission from the target user before sending messages. Misuse of this tool is not encouraged and is solely the responsibility of the user
