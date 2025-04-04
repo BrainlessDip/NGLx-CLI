@@ -1,5 +1,5 @@
 # NGLx CLI
-![Preview Image](https://i.ibb.co.com/PGVQKJMD/Screenshot-2025-03-24-00-58-57-420-com-termux-edit.jpg)
+![Preview Image](https://i.ibb.co.com/0pmjn5Lt/Screenshot-2025-04-04-134841.png)
 ## Prerequisites
 
 - **Python 3.x** installed on your system.
